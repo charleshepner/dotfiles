@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Charles Hepner
+#	email = charleshepner@gmail.com
+[user]
+	name = Charles Hepner
+	email = charleshepner@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --name-only
+	ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat
+	ld = log --pretty=format:\"%C(yellow)%h\\\\ %C(green)%ad%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=short --graph
+	ls = log --pretty=format:\"%C(green)%h\\\\ %C(yellow)[%ad]%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=relative
+	p = pull --rebase --ff-only
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
